@@ -1,0 +1,227 @@
+<!--
+  Form:
+    - first name
+    - last name
+    - email address
+    - city
+    - state
+      - select element with abbreviations for each state
+      - no need to add value attributes to these options
+    - zipcode
+    - question asking "Which of these colors do you most prefer?"
+      - make these options radio elements
+    - question asking "What web technologies do you want to hear more about?"
+      - make these checkbox options, or a multiple select
+    - comment box
+      - use textarea
+      - set rows and cols
+      - remember, this is not a self closing element
+    - hidden input
+      - set this to the current date
+    - submit input
+    - reset input
+
+    - add inputmode attribute for email and number entries for mobile devices
+
+    - use correct input type for email
+    - include placeholder for email with properly formatted address
+    - input type for zip code
+      - set max to 5 chars
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Form Practice</title>
+    <meta charset="utf-8" />
+
+    <style>
+
+      body {
+        font: normal 18px sans-serif;
+        width: 600px;
+        margin: 0 auto;
+      }
+
+      dl {
+        margin: 0;
+      }
+
+      dd {
+        margin: 0;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      input[type="text"], input[type="email"], select  {
+        width: 100%;
+        height: 20px;
+        margin: 10px 0 10px 0;
+        font-size: 14px;
+        padding: 5px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <form action="#" method="post">
+      <dl>
+        <dt><label for="first_name">First Name</label></dt>
+        <dd><input type="text" id="first_name" /></dd>
+      </dl>
+
+      <dl>
+        <dt><label for="last_name">Last Name</label></dt>
+        <dd><input type="text" id="last_name" /></dd>
+      </dl>
+
+      <dl>
+        <dt><label for="email" inputmode="">Email Address</label></dt>
+        <dd><input type="email" id="email" placeholder="jon_doe@gmail.com" /></dd>
+      </dl>
+
+      <dl>
+        <dt><label for="city">City</label></dt>
+        <dd><input type="text" id="city" /></dd>
+      </dl>
+
+      <dl>
+        <dt><label for="state">State</label></dt>
+        <dd>
+          <select name="state">
+            <option>AK</option>
+            <option>AL</option>
+            <option>AR</option>
+            <option>AZ</option>
+            <option>CA</option>
+            <option>CO</option>
+            <option>CT</option>
+            <option>DC</option>
+            <option>DE</option>
+            <option>FL</option>
+            <option>GA</option>
+            <option>HI</option>
+            <option>IA</option>
+            <option>ID</option>
+            <option>IL</option>
+            <option>IN</option>
+            <option>KS</option>
+            <option>KY</option>
+            <option>LA</option>
+            <option>MA</option>
+            <option>MD</option>
+            <option>ME</option>
+            <option>MI</option>
+            <option>MN</option>
+            <option>MO</option>
+            <option>MS</option>
+            <option>MT</option>
+            <option>NC</option>
+            <option>ND</option>
+            <option>NE</option>
+            <option>NH</option>
+            <option>NJ</option>
+            <option>NM</option>
+            <option>NV</option>
+            <option>NY</option>
+            <option>OH</option>
+            <option>OK</option>
+            <option>OR</option>
+            <option>PA</option>
+            <option>RI</option>
+            <option>SC</option>
+            <option>SD</option>
+            <option>TN</option>
+            <option>TX</option>
+            <option>UT</option>
+            <option>VA</option>
+            <option>VT</option>
+            <option>WA</option>
+            <option>WI</option>
+            <option>WV</option>
+            <option>WY</option>
+          </select>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt><label for="zip">Zip</label></dt>
+        <dd><input type="text" id="city" maxlength="5" /></dd>
+      </dl>
+
+      <dl>
+        <dt><label for="colors">Which of these colors do you most prefer?</label></dt>
+        <dd>
+          <input type="radio" id="red" name="color" value="red" />
+          <label for="red">Red</label>
+        </dd>
+        <dd>
+          <input type="radio" id="orange" name="color" value="orange" />
+          <label for="orange">Orange</label>
+        </dd>
+        <dd>
+          <input type="radio" id="yellow" name="color" value="yellow" />
+          <label for="yellow">Yellow</label>
+        </dd>
+        <dd>
+          <input type="radio" id="green" name="color" value="green" />
+          <label for="green">Green</label>
+        </dd>
+        <dd>
+          <input type="radio" id="blue" name="color" value="blue" />
+          <label for="blue">Blue</label>
+        </dd>
+        <dd>
+          <input type="radio" id="indigo" name="color" value="indigo" />
+          <label for="indigo">Indigo</label>
+        </dd>
+        <dd>
+          <input type="radio" id="violet" name="color" value="violet" />
+          <label for="violet">Violet</label>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt><label for="technologies">Which web technologies would you like to hear more about?</label></dt>
+        <dd>
+          <ul>
+            <li>
+              <input type="checkbox" name="technologies" />
+              <label for="html">HTML</label>
+            </li>
+            <li>
+              <input type="checkbox" name="technologies" />
+              <label for="css">CSS</label>
+            </li>
+            <li>
+              <input type="checkbox" name="technologies" />
+              <label for="javascript">Javascript</label>
+            </li>
+            <li>
+              <input type="checkbox" name="technologies" />
+              <label for="ruby">Ruby</label>
+            </li>
+            <li>
+              <input type="checkbox" name="technologies" />
+              <label for="rails">Rails</label>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt><label for="comments">Comments</label></dt>
+        <dd><textarea name="comments" id="comments" rows="6" cols="80"></textarea></dd>
+      </dl>
+
+      <input type="hidden" value="date" />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>

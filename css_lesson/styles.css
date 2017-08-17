@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+section {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+body {
+  border: 2px solid #999;
+  font-family: sans-serif;
+  color: #656464;
+  padding-top: 10px;
+  width: 1040px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  color: #ce4a4a;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+p {
+  line-height: 35px;
+}
+
+.border {
+  width: 650px;
+  border: 2px dashed #000;
+  padding: 30px;
+  margin: 45px;
+}
+
+.inline-margin a {
+  margin: 45px;
+}
+
+.inline-padding a {
+  background: green;
+  color: #fff;
+  padding: 30px;
+}
+
+.inline-floating a {
+  background: green;
+  color: #fff;
+  margin: 15px;
+  border: 3px solid darkgreen;
+  padding: 30px;
+  float: left;
+}
+
+.inline-floating::after {
+    content: "";
+    clear: left;
+    display: block;
+}
+
+.block-1 {
+  background: dodgerblue;
+  color: #fff;
+}
+
+.block-2 {
+  background: green;
+  color: #fff;
+  padding: 20px;
+  margin: 20px;
+}
+
+.block-3 {
+  background: tomato;
+  color: #fff;
+  width: 90px;
+}
+
+.fl1 {
+  background: dodgerblue;
+  border: 1px solid red;
+  color: #fff;
+  float: left;
+}
+
+.fl2 {
+  background: tomato;
+  border: 1px solid dodgerblue;
+  color: #fff;
+  float: right;
+}
+
+.fl3, .fl4 {
+  text-align: center;
+  padding: 25px;
+}
+
+.fl3 {
+  background: dodgerblue;
+  color: #fff;
+  float: left;
+  width: 300px;
+  height: 70px;
+}
+
+.fl4 {
+  background: tomato;
+  color: #fff;
+  float: right;
+  width: 300px;
+  height: 70px;
+}
+
+.floated-boxes::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.block-anchors a {
+  background: dodgerblue;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  text-align: center;
+}
+
+.nav {
+  text-align: center;
+}
+
+.nav a {
+  display: inline-block;
+  color: #fff;
+  background: dodgerblue;
+  padding: 20px 30px;
+  margin: 20px 8px 25px 8px;
+  list-style: none;
+  width: 180px;
+}
+
+.floats h1 {
+  border-top: 2px dashed #000;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.fl5, .fl6, .clear {
+  color: #fff;
+}
+
+.fl5 {
+  background: tomato;
+  width: 450px;
+  height: 100px;
+  float: left;
+  text-align: center;
+  line-height: 100px
+}
+
+.fl6 {
+  width: 536px;
+  height: 100px;
+  background: dodgerblue;
+  text-align: center;
+  float: right;
+  line-height: 100px
+}
+
+.clear {
+  line-height: 50px;
+  text-align: center;
+  background: seagreen;
+  content: "";
+  display: block;
+  clear: both;
+  margin-bottom: 35px;
+}
+
+ul li {
+  font-style: italic;
+  line-height: 30px;
+  margin-left: 50px;
+}
+
+.box-fixed {
+  top: auto;
+  bottom: 50px;
+  left: 35px;
+  background: dodgerblue;
+  color: #fff;
+  width: 225px;
+  padding: 25px 35px;
+  margin: 10px;
+  border-radius: 10px;
+  position: fixed;
+  text-align: center;
+  z-index: -1;
+}
+
+.box-relative {
+  background: tomato;
+  border-radius: 5px;
+  line-height: 75px;
+  position: relative;
+  color: #fff;
+  width: 260px;
+  height: 75px;
+  text-align: center;
+  left: -55px;
+  top: 35px;
+}
+
+.box-absolute {
+  width: 200px;
+  text-align: center;
+  color: #fff;
+  background: green;
+  padding: 25px 35px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: absolute;
+  top: -30px;
+  left: 230px;
+}

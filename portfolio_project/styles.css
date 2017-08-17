@@ -1,0 +1,74 @@
+@import url("whitespace-reset.css");
+
+body {
+  font: normal 18px 'Roboto Condensed', sans-serif;
+  color: #193441;
+  background-image: linear-gradient(to bottom, #d2ddbf, #fcfff5);
+  background-repeat: no-repeat;
+}
+
+header {
+  width: 920px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  float: left;
+  color: #193441;
+  font-weight: normal;
+  padding: 45px 0 15px 115px;
+  font-size: 36px;
+  background: transparent url("Icon.png") 0 0 no-repeat;
+}
+
+nav {
+  float: right;
+  padding: 75px 0 0 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  background: #fcfff5;
+  display: block;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  color: #91aa9d;
+  text-decoration: none;
+  padding: 10px 40px 14px 40px;
+}
+
+nav a.active {
+  color: #fcfff5;
+  background: #91aa9d;
+}
+
+main {
+  box-shadow: 0 5px 5px #b5b5b5;
+  overflow: hidden;
+  background: #fff;
+  width: 960px;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+figure {
+  float: right;
+  padding: 0 0 20px 30px;
+}
+
+footer {
+  font-size: 15px;
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+}
+
+img.masthead {
+  width: 100%;
+  margin: 0 auto;
+}

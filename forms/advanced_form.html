@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <style>
+
+    body {
+      font: normal 14px Helvetica;
+      width: 600px;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    dl.partial {
+      display: inline-block;
+      padding-right: 1.25rem;
+      box-sizing: border-box;
+      vertical-align: top;
+    }
+
+    fieldset {
+      border: none;
+      background: #ececec;
+      border-left: 3px solid #cccccc;
+      margin-bottom: 4px;
+      padding: 1.5rem 2rem;
+    }
+
+    input[name="last_name"] {
+      margin-left: 2%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    textarea {
+      width: 100%;
+      height: 2.5rem;
+      padding: .31rem .5rem;
+      border: 1px solid #0066cc;
+      box-sizing: border-box;
+      border-radius: 4px;
+      font: normal .875rem Helvetica, Arial, sans-serif;
+      margin-bottom: 1.5rem;
+    }
+
+    input[name*="name"] {
+      width: 49%;
+    }
+
+    label {
+      display: block;
+      padding-bottom: .62rem;
+      font-weight: bold;
+      color: #666666;
+    }
+
+    .half {
+      width: 49%;
+    }
+
+    .third {
+      width: 32.33%;
+    }
+
+  </style>
+
+  <body>
+    <header>
+      <h1>Create Your Profile</h1>
+    </header>
+
+    <form>
+      <fieldset>
+        <h2>Personal Info</h2>
+        <dl>
+          <dt><label for="first_name">Your Name</label></dt>
+          <dd><input type="text" name="first_name" id="first_name" placeholder="First" /><!--
+          --><input type="text" name="last_name" id="last_name" placeholder="Last" /></dd>
+        </dl>
+          <dt><label for="email">Email</label></dt>
+          <dd><input type="email" name="email" id="email" /></dd>
+      </fieldset>
+
+      <fieldset>
+        <h2>Social Media Accounts:</h2>
+        <dl class="partial third">
+          <dt><label for="facebook">Facebook</label></dt>
+          <dd><input type="url" name="facebook" id="facebook" /></dd>
+        </dl>
+        <dl class="partial third">
+          <dt><label for="twitter">Twitter</label></dt>
+          <dd><input type="url" name="twitter" id="twitter" /></dd>
+        </dl>
+        <dl class="partial third">
+          <dt><label for="linkedin">LinkedIn</label></dt>
+          <dd><input type="url" name="linkedin" id="linkedin" /></dd>
+        </dl>
+      </fieldset>
+
+      <fieldset>
+        <h2>Account Info</h2>
+        <dl>
+          <dt><label for="profile">Profile Name</label></dt>
+          <dd><input type="text" name="profile" id="profile" /></dd>
+        </dl>
+        <dl class="partial half">
+          <dt><label for="password">Password</label></dt>
+          <dd><input type="password" name="password" id="password" /></dd>
+        </dl>
+        <dl class="partial half">
+          <dt><label for="linkedin">Confirm Password</label></dt>
+          <dd><input type="password" name="linkedin" id="linkedin" /></dd>
+        </dl>
+      </fieldset>
+
+      <fieldset>
+        <h2><label for="bio">Bio</label></h2>
+        <textarea name="bio" cols="120" rows="6"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <input type="checkbox" name="agreement" id="agreement" value="agreement" />
+        <label for="agreement">I agree to treat other users with respect, and will not say anything at all if I have nothing nice to say.</label>
+        <div><button type="submit">Create Account</button></div>
+      </fieldset>
+    </form>
+
+  </body>
+</html>
