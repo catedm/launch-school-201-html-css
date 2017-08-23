@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Liquid Layout</title>
+    <meta charset="utf-8" />
+
+    <style>
+    main {
+      min-width: 600px;
+      max-width: 1400px;
+      }
+      
+      #content,
+      #sidebar {
+        padding: 20px 30px;
+      }
+
+      #sidebar {
+        overflow: hidden;
+      }
+
+      #content {
+        float: left;
+        width: 70%;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div id="content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum augue ac blandit pretium. Vestibulum eros quam, ultricies ac euismod ac, pretium vitae sem. Proin tincidunt interdum sem. Donec in tempus ante. Mauris fringilla accumsan lacinia. Sed at varius libero.
+      </div>
+
+      <div id="sidebar">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum augue ac blandit pretium. Vestibulum eros quam, ultricies ac euismod ac, pretium vitae sem. Proin tincidunt interdum sem. Donec in tempus ante. Mauris fringilla accumsan lacinia. Sed at varius libero.
+      </div>
+    </main>
+  </body>
+</html>
