@@ -5,37 +5,32 @@
     <meta charset="utf-8" />
 
     <style>
-    main {
-      min-width: 600px;
-      max-width: 1400px;
-      }
-      
-      #content,
-      #sidebar {
-        padding: 20px 30px;
-      }
+    body { background: #e0e0e0; }
 
-      #sidebar {
-        overflow: hidden;
-      }
+    #content,
+    #sidebar {
+      padding: 20px 30px;
+    }
 
-      #content {
-        float: left;
-        width: 70%;
-        box-sizing: border-box;
-      }
+    #content {
+      float: left;
+      width: 70%;
+      box-sizing: border-box;
+    }
+
+    #sidebar {
+      overflow: hidden;
+    }
     </style>
   </head>
 
   <body>
-    <main>
-      <div id="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum augue ac blandit pretium. Vestibulum eros quam, ultricies ac euismod ac, pretium vitae sem. Proin tincidunt interdum sem. Donec in tempus ante. Mauris fringilla accumsan lacinia. Sed at varius libero.
-      </div>
+    <div id="primary">
+      <h1>Main Content</h1>
+    </div>
 
-      <div id="sidebar">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum augue ac blandit pretium. Vestibulum eros quam, ultricies ac euismod ac, pretium vitae sem. Proin tincidunt interdum sem. Donec in tempus ante. Mauris fringilla accumsan lacinia. Sed at varius libero.
-      </div>
-    </main>
+    <div id="secondary">
+      <h3>Sidebar Content</h3>
+    </div>
   </body>
 </html>
