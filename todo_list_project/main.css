@@ -1,0 +1,245 @@
+/* Revisions */
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p.list-header { color: #148fd5; }
+p.list-header img { margin-right: 18px; }
+
+ul.main-todo-list { width: 100%; }
+
+ul.main-todo-list li {
+  border-top: 1px solid #e7e7e7;
+  padding: 18px 0;
+}
+
+ul.main-todo-list li img { float: right; }
+ul.main-todo-list label { cursor: pointer; }
+ul.main-todo-list label:hover { color: #148fd5; }
+ul.main-todo-list li.complete input[type="checkbox"] {
+  background: transparent url('images/check-box-checked.png') center no-repeat;
+}
+ul.main-todo-list li.complete {
+  text-decoration: line-through;
+  color: #b3b3b3;
+}
+ul.main-todo-list li.complete label:hover { color: #b3b3b3; }
+
+
+input[id="modal"]:checked + label:before {
+  content: "";
+  background: rgba(0, 0, 0, .4);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.modal { display: none; }
+input[id="modal"]:checked ~ .modal {
+  background: #fff;
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  width: 575px;
+  height: 415px;
+  margin: 0 0 0 -200px;
+  z-index: 2;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+dl { margin-bottom: 25px; }
+dd, dt {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+dt {
+  vertical-align: top;
+  width: 100px;
+  margin-top: 9px;
+}
+input[type="text"],
+select,
+textarea {
+  border: 1px solid #b3b3b3;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 100%;
+}
+input[type="text"],
+textarea {
+  width: 395px;
+}
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+select {
+  background: transparent url('images/select-arrow.png') 103px center no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0px;
+  width: 120px;
+}
+textarea {
+  font-family: Helvetica; /* had to add this extra rule for Firefox */
+  height: 145px;
+  resize: none;
+}
+a.button {
+  background: #148fd5;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  width: 185px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 5px;
+  margin-right: 17px;
+}
+
+ul.nav-todos li {
+  padding: 13px 0px;
+  text-align: right;
+}
+ul.nav-todos.complete li {
+  text-align: inherit;
+  margin-left: 102px;
+}
+ul.nav-todos li span { margin: 0px 33px 0px 135px; }
+ul.nav-todos li span.num-todos-header { margin-left: 83px; }
+ul.nav-todos.complete { margin-top: 60px; }
+ul.nav-todos.complete li.nav-todos-header { margin-left: 67px; }
+li.nav-todos-header {
+  color: #fff;
+  font-size: 18px;
+}
+li.active {
+  color: #fff;
+  background: #383f5f;
+}
+.nav-todos-header img {
+  position: relative;
+  top: 6px;
+  left: -5px;
+}
+.nav-todos.complete li.complete { text-decoration: line-through; }
+
+/* End Revisions */
+
+body {
+  font: normal 16px Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+main {
+  margin: 0 100px 0 335px;
+  transition: .5s;
+}
+
+nav {
+  box-sizing: border-box;
+  padding: 51px 0px;
+  background: #464f77;
+  color: rgba(255, 255, 255, .5);
+  height: 100vh;
+  width: 335px;
+  margin: 0 0 0 -335px;
+}
+
+#content {
+  padding: 75px 30px;
+  float: right;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+p.todolist-date {
+  font-size: 21px;
+  margin: 0px 0px 45px 0px;
+}
+
+span.num-todos,
+span.num-todos-header {
+  color: #fff;
+  background: #6b7292;
+  font-size: 14px;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  padding: 2px 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+span.num-todos.active {
+  background: #148fd5;
+}
+span.num-todos.active.top {
+  margin: 0px 0px 0px 20px;
+  position: relative;
+  top: -2px;
+} /* I needed these rules to align the top blue circle with the top of "2/16" next to it */
+
+input[type="checkbox"], td label { cursor: pointer; }
+td label:hover { color: #148fd5; }
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+	border: 1px solid #9c9c9c;
+	padding: 6px;
+	border-radius: 0px;
+  outline: none;
+  vertical-align: top;
+  position: relative;
+  top: -2px;
+}
+input[type="checkbox"].complete {
+  background: transparent url('images/check-box-checked.png') center no-repeat;
+}
+input[type="checkbox"].complete + label {
+  text-decoration: line-through;
+  color: #b3b3b3;
+}
+
+
+#sidebartoggler { display: none; }
+#content label.toggle { display: none; }
+
+@media screen and (max-width: 768px) {
+
+  p.todolist-date { margin: 15px 0px 35px 0px; }
+  #content { padding: 10px 30px; }
+  nav { padding: 58px 0px; }
+
+  #content label.toggle {
+    display: inline-block;
+    cursor: pointer;
+    color: #464f77;
+    font-size: 24px;
+  }
+
+  main {
+    margin: 0 100px 0 0;
+    transition: .5s;
+  }
+  #sidebartoggler:checked + main {
+    margin: 0 100px 0 335px;
+    transition: .5s;
+  }
+
+  input[id="modal"]:checked ~ .modal { left: 36%; }
+
+}
